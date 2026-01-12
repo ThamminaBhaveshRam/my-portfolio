@@ -501,3 +501,30 @@ footer {
     font-size: 32px;
   }
 }
+.page-title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+  text-align: center;
+  color: #aaa;
+  margin-bottom: 3rem;
+}
+
+.project-info {
+  padding: 1rem;
+}
+
+.project-tech {
+  font-size: 0.85rem;
+  color: #ffcc00;
+  margin-bottom: 0.5rem;
+}
+
+.project-summary {
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.5;
+}
