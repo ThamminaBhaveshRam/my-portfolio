@@ -321,18 +321,8 @@
             videoID: "",
             desc: "<p>Creating water, fire, and holographic effects using Unity Shader Graph.</p>",
             resources: []
-          },
-    {
-      id: "ta-optimization",
-      label: "Optimization",
-      title: "Performance Optimization",
-      image: "https://picsum.photos/800/400?random=9",
-      videoID: "",
-      desc: "<p>Draw calls, batching, GPU profiling, shader cost.</p>",
-      resources: []
-    }
-  ]
-}        ]
+          }
+        ]
       }
     };
 
@@ -405,6 +395,10 @@
           <div class="resources-section">
             <h3>📚 Resources</h3>
             <div class="resource-list">${pdfHtml}</div>
+            <div class="upload-box">
+              <p style="margin-bottom:0.5rem; font-size:0.9rem; color:#888;">Add to portfolio:</p>
+              <input type="file" id="file-upload" accept=".pdf">
+            </div>
           </div>
         </div>
       `;
@@ -417,4 +411,4 @@
     });
   </script>
 </body>
-</html>
+</html> 
