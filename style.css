@@ -434,9 +434,9 @@ footer {
   }
 }
 .about-section {
-  background: #f8f8f8;
+  background: #000;
   padding: 100px 8%;
-  color: #111;
+  color: #fff;
 }
 
 .about-container {
@@ -453,43 +453,44 @@ footer {
 .about-left h5 {
   letter-spacing: 2px;
   font-size: 14px;
-  color: #777;
+  color: #aaa;
   margin-bottom: 12px;
 }
 
 .about-left h2 {
   font-size: 42px;
   margin-bottom: 20px;
+  color: #fff;
 }
 
 .about-left p {
   font-size: 16px;
   line-height: 1.8;
-  color: #444;
+  color: #ccc;
   margin-bottom: 18px;
 }
-
 .resume-btn {
   display: inline-block;
   margin-top: 20px;
   padding: 14px 32px;
-  background: #000;
-  color: #fff;
+  background: #fff;
+  color: #000;
   border-radius: 40px;
   text-decoration: none;
-  font-weight: 500;
-  transition: transform 0.2s ease;
+  font-weight: 600;
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .resume-btn:hover {
+  background: #e6e6e6;
   transform: translateY(-2px);
 }
-
 .about-right img {
   width: 260px;
   height: 260px;
   border-radius: 50%;
   object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.15);
 }
 @media (max-width: 900px) {
   .about-container {
