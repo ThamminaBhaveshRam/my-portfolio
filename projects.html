@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
+
 <body>
   <nav>
     <h2 class="logo">Bhavesh</h2>
@@ -19,32 +20,58 @@
   </nav>
 
   <section class="page fade-in">
-    <h1>My Projects</h1>
+    <h1 class="page-title">Projects</h1>
+    <p class="page-subtitle">
+      Selected game prototypes and systems built using Unity & C#.
+    </p>
 
     <div class="projects-grid">
+
+      <!-- Project 1 -->
       <div class="project-card"
-           data-title="weels Happy"
-           data-desc="A fast-paced action game where you control a spider with fusion powers."
+           data-title="Wheels Happy"
+           data-desc="A physics-based arcade prototype focused on movement feel and player control. Built to experiment with momentum, balance, and responsive input."
            data-video="">
-        <img src="images/kmc_20221020_173358.jpg" alt="Spider Fuser">
-        <h3>1st Project</h3>
+        <img src="images/kmc_20221020_173358.jpg" alt="Wheels Happy Game">
+        <div class="project-info">
+          <h3>Wheels Happy</h3>
+          <p class="project-tech">Unity • C# • Physics</p>
+          <p class="project-summary">
+            Arcade-style prototype exploring smooth controls and satisfying motion.
+          </p>
+        </div>
       </div>
 
+      <!-- Project 2 -->
       <div class="project-card"
            data-title="Ocean Adventure"
-           data-desc="Explore the deep sea with realistic physics and stunning visuals."
+           data-desc="A third-person exploration prototype set underwater, focusing on swimming mechanics, camera control, and environmental mood."
            data-video="https://www.youtube.com/embed/abcd1234">
         <img src="images/project2.png" alt="Ocean Adventure">
-        <h3>2nd Project</h3>
+        <div class="project-info">
+          <h3>Ocean Adventure</h3>
+          <p class="project-tech">Unity • Environment Design</p>
+          <p class="project-summary">
+            Underwater exploration with smooth movement and immersive atmosphere.
+          </p>
+        </div>
       </div>
 
+      <!-- Project 3 -->
       <div class="project-card"
            data-title="Shark Hunter"
-           data-desc="An underwater survival game where players battle against sharks."
+           data-desc="A survival-focused prototype where players evade predators while managing oxygen and movement under pressure."
            data-video="">
         <img src="images/project3.png" alt="Shark Hunter">
-        <h3>3rd Project</h3>
+        <div class="project-info">
+          <h3>Shark Hunter</h3>
+          <p class="project-tech">Unity • Gameplay Systems</p>
+          <p class="project-summary">
+            Survival mechanics built around tension and limited resources.
+          </p>
+        </div>
       </div>
+
     </div>
   </section>
 
