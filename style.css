@@ -528,3 +528,7 @@ footer {
   color: #ccc;
   line-height: 1.5;
 }
+.sidebar {
+  max-height: 80vh;
+  overflow-y: auto;
+}
