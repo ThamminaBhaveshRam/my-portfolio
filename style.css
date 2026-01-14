@@ -564,10 +564,15 @@ footer {
   transition: transform 0.3s, border-color 0.3s;
 }
 
+.showcase-card {
+  transition: box-shadow 0.3s, border-color 0.3s;
+}
+
 .showcase-card:hover {
-  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
   border-color: #ffcc00;
 }
+
 
 .showcase-card h3 {
   margin-bottom: 0.3rem;
