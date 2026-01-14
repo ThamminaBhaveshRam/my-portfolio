@@ -609,3 +609,31 @@ footer {
   height: 100%;
   pointer-events: auto;
 }
+/* =========================================
+   11. DOCUMENTATION TABS
+   ========================================= */
+.doc-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.doc-tab {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  background: rgba(255,255,255,0.03);
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.doc-tab.active {
+  background: rgba(255,204,0,0.1);
+  color: #ffcc00;
+  border-bottom: 2px solid #ffcc00;
+}
+
+.doc-tab:hover {
+  background: rgba(255,255,255,0.05);
+}
