@@ -56,3 +56,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+document.querySelectorAll(".play-overlay").forEach(overlay => {
+  overlay.addEventListener("click", () => {
+    const iframe = overlay.nextElementSibling;
+    iframe.src += "&autoplay=1";
+    overlay.remove();
+  });
+});
+
+
