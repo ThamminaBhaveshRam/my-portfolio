@@ -583,31 +583,11 @@ footer {
   color: #bbb;
   margin-bottom: 1rem;
 }
-.video-wrapper {
-  position: relative;
-  z-index: 2;
-}
 
 .showcase-card {
   position: relative;
 }
 /* FIX: Enable iframe clicks */
-.video-wrapper iframe {
-  pointer-events: auto;
-}
-.play-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 4rem;
-  color: white;
-  cursor: pointer;
-  transition: background 0.3s;
-  z-index: 3;
-}
 
 .play-overlay:hover {
   background: rgba(0,0,0,0.6);
@@ -617,6 +597,23 @@ footer {
   position: relative;
   width: 100%;
   padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+}
+/* VIDEO FIX — DO NOT TOUCH */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
 }
