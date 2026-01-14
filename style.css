@@ -532,3 +532,50 @@ footer {
   max-height: 80vh;
   overflow-y: auto;
 }
+.showcase-section {
+  padding: 100px 8%;
+  background: #000;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  color: #aaa;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-inline: auto;
+}
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.showcase-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: left;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.showcase-card:hover {
+  transform: translateY(-6px);
+  border-color: #ffcc00;
+}
+
+.showcase-card h3 {
+  margin-bottom: 0.3rem;
+}
+
+.showcase-card p {
+  font-size: 0.9rem;
+  color: #bbb;
+  margin-bottom: 1rem;
+}
