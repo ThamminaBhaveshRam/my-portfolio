@@ -349,7 +349,6 @@ footer {
   left: 0;
   color: #999;
   font-size: 1rem;
-  pointer-events: none;
   transition: 0.3s ease all;
 }
 
@@ -578,4 +577,16 @@ footer {
   font-size: 0.9rem;
   color: #bbb;
   margin-bottom: 1rem;
+}
+.video-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+.showcase-card {
+  position: relative;
+}
+/* FIX: Enable iframe clicks */
+.video-wrapper iframe {
+  pointer-events: auto;
 }
