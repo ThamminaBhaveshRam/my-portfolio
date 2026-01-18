@@ -11,40 +11,45 @@ body {
   flex-direction: column;
 }
 /* =========================================
-   2. NAVIGATION
+   NAVIGATION (FIXED RESPONSIVE)
    ========================================= */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: clamp(0.8rem, 2vw, 1.2rem) clamp(1rem, 4vw, 2.5rem);
   background: rgba(255,255,255,0.05);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255,255,255,0.2);
-  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
 }
 
 nav .logo {
   font-family: 'Tiro Devanagari Hindi', serif;
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 4vw, 1.6rem);
 }
 
 nav ul {
   display: flex;
   list-style: none;
-  gap: 1rem;
-  flex-wrap: wrap;
+  gap: clamp(0.8rem, 3vw, 2rem);
   padding: 0;
   margin: 0;
+}
+
+nav ul li {
+  display: flex;
 }
 
 nav a {
   text-decoration: none;
   color: white;
+  font-size: clamp(0.85rem, 3.2vw, 1rem);
+  font-weight: 500;
   transition: color 0.3s;
 }
 
-nav a:hover, nav a.active {
+nav a:hover,
+nav a.active {
   color: #ffcc00;
 }
 
@@ -422,13 +427,6 @@ footer {
 @media (max-width: 600px) {
   .sanskrit {
     font-size: 2rem;
-  }
-  nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: center;
-    width: 100%;
-    margin-top: 1rem;
   }
 }
 .about-section {
