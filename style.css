@@ -131,10 +131,13 @@ nav a.active {
 
 .project-card img {
   width: 100%;
+  height: auto;
+  max-height: 220px;
+  object-fit: contain;
+  background: #111;
+  padding: 12px;
   filter: grayscale(100%);
   transition: filter 0.3s;
-  height: 200px; /* Enforce height consistency */
-  object-fit: cover;
 }
 
 .project-card:hover img {
