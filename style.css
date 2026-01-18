@@ -651,38 +651,13 @@ footer {
 }
 /* ===== DESKTOP ONLY FIX (DO NOT AFFECT MOBILE) ===== */
 @media (min-width: 1024px) {
-
-  /* Fix section width */
-  .about-section,
-  .showcase-section {
-    padding: 120px 6%;
-  }
-
-  .about-container,
-  .showcase-grid {
+  .contact-section {
     max-width: 1200px;
     margin-inline: auto;
   }
 
-  /* About section balance */
-  .about-container {
-    gap: 60px;
-  }
-
-  .about-left h2 {
-    font-size: 46px;
-  }
-
-  .about-left p {
-    font-size: 17px;
-  }
-
-  /* Showcase desktop polish */
-  .showcase-grid {
-    gap: 2.5rem;
-  }
-
-  .showcase-card {
-    padding: 2rem;
+  .contact-container {
+    max-width: 1000px;
+    margin-inline: auto;
   }
 }
