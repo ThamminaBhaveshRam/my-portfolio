@@ -650,7 +650,9 @@ footer {
   background: rgba(255,255,255,0.05);
 }
 /* ===== DESKTOP ONLY FIX (DO NOT AFFECT MOBILE) ===== */
+/* ===== DESKTOP CONTACT PAGE FIX (MOBILE SAFE) ===== */
 @media (min-width: 1024px) {
+
   .contact-section {
     max-width: 1200px;
     margin-inline: auto;
@@ -660,4 +662,27 @@ footer {
     max-width: 1000px;
     margin-inline: auto;
   }
+
+  .contact-info,
+  .contact-form {
+    padding: 3.5rem 3rem;
+  }
+
+  .contact-info h1 {
+    font-size: 2.8rem;
+  }
+
+  .contact-form h3 {
+    font-size: 2rem;
+  }
+
+  .submit-btn {
+    margin-top: 1.5rem;
+  }
+
+  .resume-btn {
+    margin-top: 2rem;
+  }
+}
+
 }
