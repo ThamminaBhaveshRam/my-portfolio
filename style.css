@@ -100,7 +100,7 @@ nav a.active {
 
 .sanskrit {
   font-family: 'Tiro Devanagari Hindi', serif;
-  font-size: 3rem;
+  font-size: clamp(2rem, 6vw, 3.5rem);
   text-shadow: 2px 2px 8px black;
 }
 
@@ -564,9 +564,7 @@ footer {
 }
 
 .showcase-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .showcase-card {
@@ -656,4 +654,60 @@ footer {
   .contact-section {
     min-height: auto;
   }
+}
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    row-gap: 0.8rem;
+  }
+
+  nav ul {
+    width: 100%;
+    justify-content: center;
+  }
+
+  nav a {
+    padding: 0.3rem 0.5rem;
+  }
+}
+@media (hover: none) {
+  .project-card:hover {
+    transform: none;
+  }
+}
+@media (max-width: 600px) {
+  .showcase-section {
+    padding: 70px 5%;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .about-section {
+    padding: 60px 6%;
+  }
+
+  .about-container {
+    gap: 40px;
+  }
+
+  .about-right img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .about-left p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .resume-btn,
+  .submit-btn {
+    align-self: center;
+  }
+}
+html {
+  scroll-behavior: smooth;
 }
