@@ -63,11 +63,11 @@ function openCategory(key) {
   renderTabs();
 }
 
-// ================================
-// DOM READY
-// ================================
 document.addEventListener("DOMContentLoaded", () => {
   console.log("Portfolio site loaded ✔");
+
+  // Force start at top
+  window.scrollTo(0, 0);
 
   // NAV ACTIVE LINK
   document.querySelectorAll("nav a").forEach(link => {
@@ -90,6 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   faders.forEach(el => appearOnScroll.observe(el));
+});
 
   // PROJECT MODAL HANDLER
   const modal = document.querySelector(".project-modal");
