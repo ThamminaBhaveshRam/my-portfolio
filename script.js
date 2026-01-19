@@ -82,7 +82,7 @@ window.addEventListener("load", () => {
     (entries, observer) => {
       entries.forEach(entry => {
         if (!entry.isIntersecting) return;
-        setTimeout(() => entry.target.classList.add("visible"), 50); // small delay avoids scroll jump
+       entry.target.classList.add("visible"); // small delay avoids scroll jump
         observer.unobserve(entry.target);
       });
     },
@@ -134,6 +134,10 @@ window.addEventListener("load", () => {
       if (iframe) iframe.src += "&autoplay=1";
       overlay.remove();
     });
+
+window.addEventListener("load", () => {
+  window.scrollTo(0, 0); // always start at top
+});
   });
 
   // OPTIONAL: Auto-open first tab when docs load
