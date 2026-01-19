@@ -147,7 +147,51 @@ nav a.active {
 .project-card h3 {
   margin: 0.5rem 0;
 }
+/* ===== PROJECTS PAGE ENHANCEMENT ===== */
 
+.projects-grid {
+  margin-top: 3rem;
+}
+
+/* Desktop polish */
+@media (min-width: 1000px) {
+  .project-card {
+    text-align: left;
+    padding-bottom: 1.2rem;
+  }
+
+  .project-info {
+    padding: 1.2rem 1.4rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .project-summary {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile polish */
+@media (max-width: 768px) {
+  .project-card {
+    border-radius: 14px;
+  }
+
+  .project-card img {
+    max-height: 180px;
+    padding: 10px;
+  }
+
+  .project-info {
+    text-align: center;
+  }
+
+  .project-summary {
+    font-size: 0.9rem;
+  }
+}
 /* =========================================
    5. BUTTONS
    ========================================= */
