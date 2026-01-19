@@ -637,3 +637,117 @@ footer {
 .doc-tab:hover {
   background: rgba(255,255,255,0.05);
 }
+
+/* =========================
+   MOBILE OVERRIDES ONLY
+   ========================= */
+
+/* Tablet & Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+
+  /* HERO */
+  .hero {
+    height: 50vh;
+  }
+  .sanskrit {
+    font-size: 2.5rem;
+  }
+
+  /* NAVIGATION */
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  /* ABOUT SECTION */
+  .about-container {
+    flex-direction: column-reverse; /* stack for mobile */
+    text-align: center;
+    gap: 40px;
+  }
+  .about-left h2 {
+    font-size: 32px;
+  }
+  .about-left p {
+    font-size: 15px;
+  }
+  .about-right img {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+  }
+  .resume-btn {
+    margin: 20px auto 0;
+  }
+
+  /* CONTACT SECTION */
+  .contact-container {
+    flex-direction: column; /* stack left & right */
+  }
+  .contact-info, .contact-form {
+    padding: 2rem 1.5rem; /* smaller padding */
+    width: 100%;
+  }
+  .contact-info h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .submit-btn, .resume-btn {
+    align-self: center;
+  }
+
+  /* SHOWCASE GRID */
+  .showcase-grid {
+    grid-template-columns: 1fr; /* stack cards */
+    gap: 1.2rem;
+  }
+  .showcase-card h3 {
+    font-size: 1rem;
+  }
+  .showcase-card p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Small Mobile (max-width: 600px) */
+@media (max-width: 600px) {
+
+  /* HERO */
+  .sanskrit {
+    font-size: 2rem;
+  }
+
+  /* ABOUT SECTION */
+  .about-left h2 {
+    font-size: 28px;
+  }
+  .about-left p {
+    font-size: 14px;
+  }
+  .about-right img {
+    width: 150px;
+    height: 150px;
+  }
+  .resume-btn {
+    padding: 10px 20px;
+  }
+
+  /* CONTACT SECTION */
+  .contact-info h1 {
+    font-size: 1.6rem;
+  }
+  .contact-info p, .info-item, .contact-form h3 {
+    font-size: 0.9rem;
+  }
+  .input-group input, .input-group textarea {
+    font-size: 0.9rem;
+  }
+
+  /* NAVIGATION */
+  nav ul {
+    gap: 0.4rem;
+  }
+}
