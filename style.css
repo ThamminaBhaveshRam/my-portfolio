@@ -244,6 +244,8 @@ footer {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -255,7 +257,7 @@ footer {
 
 /* --- Left Side: Contact Info --- */
 .contact-info {
-  flex: 1;
+  flex: 0.9;
   min-width: 300px;
   padding: 3rem 2rem;
   background: rgba(0, 0, 0, 0.3);
@@ -329,7 +331,7 @@ footer {
 
 /* --- Right Side: Contact Form --- */
 .contact-form {
-  flex: 1.2;
+  flex: 1.1;
   min-width: 300px;
   padding: 3rem 2rem;
   display: flex;
@@ -423,21 +425,6 @@ footer {
    ========================================= */
 
 /* Tablet & Mobile Breakpoint */
-@media (max-width: 768px) {
-  /* Contact Page Stacking */
-  .contact-container {
-    flex-direction: column;
-  }
-  .contact-info, .contact-form {
-    padding: 2rem 1.5rem;
-  }
-  .contact-info h1 {
-    font-size: 2rem;
-  }
-  .hero {
-  min-height: 65vh;
-  }
-}
 
 /* Small Mobile Breakpoint */
 @media (max-width: 600px) {
@@ -655,21 +642,6 @@ footer {
     min-height: auto;
   }
 }
-@media (max-width: 768px) {
-  nav {
-    flex-wrap: wrap;
-    row-gap: 0.8rem;
-  }
-
-  nav ul {
-    width: 100%;
-    justify-content: center;
-  }
-
-  nav a {
-    padding: 0.3rem 0.5rem;
-  }
-}
 @media (hover: none) {
   .project-card:hover {
     transform: none;
@@ -684,7 +656,59 @@ footer {
     font-size: 2rem;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+.hidden {
+  display: none !important;
+}
+@media (min-width: 1000px) {
+  .contact-info h1 {
+    font-size: 2.8rem;
+  }
+
+  .contact-form h3 {
+    font-size: 2rem;
+  }
+}
 @media (max-width: 768px) {
+
+  /* NAV */
+  nav {
+    flex-wrap: wrap;
+    row-gap: 0.8rem;
+  }
+
+  nav ul {
+    width: 100%;
+    justify-content: center;
+  }
+
+  nav a {
+    padding: 0.3rem 0.5rem;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 65vh;
+  }
+
+  /* CONTACT */
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .contact-form {
+    padding: 2rem 1.5rem;
+  }
+
+  .contact-info h1 {
+    font-size: 2rem;
+  }
+
+  /* ABOUT */
   .about-section {
     padding: 60px 6%;
   }
@@ -701,16 +725,10 @@ footer {
   .about-left p {
     font-size: 15px;
   }
-}
-@media (max-width: 768px) {
+
+  /* BUTTONS */
   .resume-btn,
   .submit-btn {
     align-self: center;
   }
-}
-html {
-  scroll-behavior: smooth;
-}
-.hidden {
-  display: none !important;
 }
