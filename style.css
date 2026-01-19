@@ -652,7 +652,7 @@ footer {
   background: rgba(255,255,255,0.05);
 }
 /* ===== DESKTOP ONLY FIX (DO NOT AFFECT MOBILE) ===== */
-@media (min-width: 1024px) {
+@media (min-width: 1000px) {
   .contact-section {
     min-height: auto;
   }
