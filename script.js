@@ -66,8 +66,10 @@ function openCategory(key) {
 document.addEventListener("DOMContentLoaded", () => {
   console.log("Portfolio site loaded ✔");
 
- // Force page to start at top (tiny delay prevents jump caused by images/iframes)
-  setTimeout(() => window.scrollTo(0, 0), 10);
+// Force page to top after all images/videos load
+window.addEventListener("load", () => {
+  window.scrollTo(0, 0);
+});
 
   // NAV ACTIVE LINK
   document.querySelectorAll("nav a").forEach(link => {
