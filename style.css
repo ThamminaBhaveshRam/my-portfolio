@@ -1,3 +1,15 @@
+/* ===== GLOBAL MOBILE FIX (MANDATORY) ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 /* =========================================
    1. GLOBAL RESET & BASIC STYLES
    ========================================= */
@@ -11,40 +23,45 @@ body {
   flex-direction: column;
 }
 /* =========================================
-   2. NAVIGATION
+   NAVIGATION (FIXED RESPONSIVE)
    ========================================= */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: clamp(0.8rem, 2vw, 1.2rem) clamp(1rem, 4vw, 2.5rem);
   background: rgba(255,255,255,0.05);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255,255,255,0.2);
-  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
 }
 
 nav .logo {
   font-family: 'Tiro Devanagari Hindi', serif;
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 4vw, 1.6rem);
 }
 
 nav ul {
   display: flex;
   list-style: none;
-  gap: 1rem;
-  flex-wrap: wrap;
+  gap: clamp(0.8rem, 3vw, 2rem);
   padding: 0;
   margin: 0;
+}
+
+nav ul li {
+  display: flex;
 }
 
 nav a {
   text-decoration: none;
   color: white;
+  font-size: clamp(0.85rem, 3.2vw, 1rem);
+  font-weight: 500;
   transition: color 0.3s;
 }
 
-nav a:hover, nav a.active {
+nav a:hover,
+nav a.active {
   color: #ffcc00;
 }
 
@@ -52,13 +69,20 @@ nav a:hover, nav a.active {
    3. HERO SECTION
    ========================================= */
 .hero {
-  height: 80vh;
+  min-height: 85vh;           /* desktop */
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: url('https://picsum.photos/1920/1080?grayscale') no-repeat center/cover;
+
+  background-image: url('https://picsum.photos/1920/1080?grayscale');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
   position: relative;
+  overflow: hidden;
 }
 
 .hero::after {
@@ -76,19 +100,14 @@ nav a:hover, nav a.active {
 
 .sanskrit {
   font-family: 'Tiro Devanagari Hindi', serif;
-  font-size: 3rem;
+  font-size: clamp(2rem, 6vw, 3.5rem);
   text-shadow: 2px 2px 8px black;
 }
 
 /* =========================================
    4. GENERAL SECTIONS & GRID
    ========================================= */
-section {
-  padding: 2rem 1rem;
-  max-width: 1000px;
-  margin: auto;
-  width: 100%;
-}
+
 
 .projects-grid {
   display: grid;
@@ -112,10 +131,13 @@ section {
 
 .project-card img {
   width: 100%;
+  height: auto;
+  max-height: 220px;
+  object-fit: contain;
+  background: #111;
+  padding: 12px;
   filter: grayscale(100%);
   transition: filter 0.3s;
-  height: 200px; /* Enforce height consistency */
-  object-fit: cover;
 }
 
 .project-card:hover img {
@@ -215,9 +237,8 @@ footer {
   align-items: center;
   min-height: 80vh;
   padding: 2rem 1rem;
-  max-width: 1200px; /* Slightly wider for the split view */
+  width: 100%;
 }
-
 /* Main Container (The Glass Card) */
 .contact-container {
   display: flex;
@@ -414,7 +435,7 @@ footer {
     font-size: 2rem;
   }
   .hero {
-    height: 60vh;
+  min-height: 65vh;
   }
 }
 
@@ -422,13 +443,6 @@ footer {
 @media (max-width: 600px) {
   .sanskrit {
     font-size: 2rem;
-  }
-  nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: center;
-    width: 100%;
-    margin-top: 1rem;
   }
 }
 .about-section {
@@ -550,9 +564,7 @@ footer {
 }
 
 .showcase-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .showcase-card {
@@ -636,4 +648,66 @@ footer {
 
 .doc-tab:hover {
   background: rgba(255,255,255,0.05);
+}
+/* ===== DESKTOP ONLY FIX (DO NOT AFFECT MOBILE) ===== */
+@media (min-width: 1000px) {
+  .contact-section {
+    min-height: auto;
+  }
+}
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    row-gap: 0.8rem;
+  }
+
+  nav ul {
+    width: 100%;
+    justify-content: center;
+  }
+
+  nav a {
+    padding: 0.3rem 0.5rem;
+  }
+}
+@media (hover: none) {
+  .project-card:hover {
+    transform: none;
+  }
+}
+@media (max-width: 600px) {
+  .showcase-section {
+    padding: 70px 5%;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .about-section {
+    padding: 60px 6%;
+  }
+
+  .about-container {
+    gap: 40px;
+  }
+
+  .about-right img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .about-left p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .resume-btn,
+  .submit-btn {
+    align-self: center;
+  }
+}
+html {
+  scroll-behavior: smooth;
 }
