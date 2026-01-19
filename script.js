@@ -2,10 +2,10 @@
 // CONTENT DATABASE (TOP MOST)
 // ================================
 const contentDatabase = {
-  animation: { title: "Animation", items: [] },
-  programming: { title: "Programming", items: [] },
-  gamedesign: { title: "Game Design", items: [] },
-  techart: { title: "Technical Art", items: [] },
+  animation: { title: "Animation", topics: [] },
+  programming: { title: "Programming", topics: [] },
+  gamedesign: { title: "Game Design", topics: [] },
+  techart: { title: "Technical Art", topics: [] },
   gameartist: { title: "Game Art", topics: [] }
 };
 
@@ -128,15 +128,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (e.key === "Escape") modal.classList.remove("open");
     });
   }
-
-  // VIDEO PLAY OVERLAY
-  document.querySelectorAll(".play-overlay").forEach(overlay => {
-    overlay.addEventListener("click", () => {
-      const iframe = overlay.nextElementSibling;
-      if (iframe) iframe.src += "&autoplay=1";
-      overlay.remove();
-    });
-  });
 
   // OPTIONAL: Auto-open first tab when docs load
   // openCategory(categoryKeys[0]);
