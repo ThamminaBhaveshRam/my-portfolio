@@ -5,7 +5,8 @@ const contentDatabase = {
   animation: { title: "Animation", items: [] },
   programming: { title: "Programming", items: [] },
   gamedesign: { title: "Game Design", items: [] },
-  techart: { title: "Technical Art", items: [] }
+  techart: { title: "Technical Art", items: [] },
+  gameartist: { title: "Game Art", topics: [] }
 };
 
 // ================================
@@ -13,7 +14,7 @@ const contentDatabase = {
 // ================================
 let currentCategoryData = null;
 
-const categoryKeys = ["animation", "programming", "gamedesign", "techart"];
+const categoryKeys = ["animation", "programming", "gamedesign", "techart","gameartist"];
 
 // ================================
 // TABS RENDER FUNCTION
