@@ -97,7 +97,8 @@ const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('nav ul');
 
 hamburger.addEventListener('click', () => {
-  navMenu.classList.toggle('active');
+  hamburger.classList.toggle('active'); // hamburger animation
+  navMenu.classList.toggle('active');   // menu open/close
 });
 </script>
 </html>
