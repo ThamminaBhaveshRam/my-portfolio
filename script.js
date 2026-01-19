@@ -66,14 +66,12 @@ function openCategory(key) {
 document.addEventListener("DOMContentLoaded", () => {
   console.log("Portfolio site loaded ✔");
 
-  // Force start at top
+  // Force page to start at top
   window.scrollTo(0, 0);
 
   // NAV ACTIVE LINK
   document.querySelectorAll("nav a").forEach(link => {
-    if (link.href === window.location.href) {
-      link.classList.add("active");
-    }
+    if (link.href === window.location.href) link.classList.add("active");
   });
 
   // FADE-IN SCROLL ANIMATION
@@ -82,15 +80,13 @@ document.addEventListener("DOMContentLoaded", () => {
     (entries, observer) => {
       entries.forEach(entry => {
         if (!entry.isIntersecting) return;
-        entry.target.classList.add("visible");
+        setTimeout(() => entry.target.classList.add("visible"), 50); // small delay avoids scroll jump
         observer.unobserve(entry.target);
       });
     },
-    { threshold: 0.2, rootMargin: "0px 0px -50px 0px" }
+    { threshold: 0.2, rootMargin: "0px" }
   );
-
   faders.forEach(el => appearOnScroll.observe(el));
-});
 
   // PROJECT MODAL HANDLER
   const modal = document.querySelector(".project-modal");
@@ -141,4 +137,3 @@ document.addEventListener("DOMContentLoaded", () => {
   // OPTIONAL: Auto-open first tab when docs load
   // openCategory(categoryKeys[0]);
 });
-
