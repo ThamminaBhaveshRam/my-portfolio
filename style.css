@@ -16,6 +16,9 @@ body {
   flex-direction: column;
   overflow-anchor: none; /* prevents jump due to loading content */
 }
+body {
+  overflow-anchor: none; /* prevents browser auto-scroll jumps */
+}
 /* =========================================
    2. NAVIGATION
    ========================================= */
