@@ -435,20 +435,30 @@
       const topic = currentCategoryData.topics[index];
       const contentContainer = document.getElementById('dynamic-content');
 
-      let pdfHtml = "";
-      if (topic.resources && topic.resources.length > 0) {
-        pdfHtml = topic.resources.map(res => `
-          <div class="resource-item">
-            <div class="resource-info">
-              <strong>📄 ${res.name}</strong>
-              <span>${res.size}</span>
-            </div>
-            <a href="#" class="download-btn">⬇</a>
-          </div>
-        `).join('');
-      } else {
-        pdfHtml = "<p style='color:#666; font-style:italic;'>No resources available.</p>";
-      }
+    let pdfHtml = "";
+
+if (topic.resources && topic.resources.length > 0) {
+  pdfHtml = topic.resources.map(res => `
+    <div class="resource-item">
+      <div class="resource-info">
+        <strong>📄 ${res.name}</strong>
+        <span>${res.size}</span>
+      </div>
+    </div>
+
+    <!-- PDF VIEWER -->
+    <div class="pdf-viewer">
+      <iframe 
+        src="assets/pdfs/${res.name}" 
+        width="100%" 
+        height="500px"
+        style="border-radius:8px; border:1px solid rgba(255,255,255,0.1);">
+      </iframe>
+    </div>
+  `).join('');
+} else {
+  pdfHtml = "<p style='color:#666;'>No resources available.</p>";
+}
       
 let videoHTML = "";
 
